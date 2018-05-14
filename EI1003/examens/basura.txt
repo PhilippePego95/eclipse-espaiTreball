@@ -1,0 +1,11 @@
+20000
+Plaça Real#20010
+Carrer Falcó#20020
+Carrer d’Asensi#20100
+Carrer d’Artana#20200
+Av. de Borriana#20200
+Carrer d’Herrero#20280
+Av. de València#20370
+Carrer de Larra#20470
+Carrer d’Onda#20498
+Av. de Casalduch#20500

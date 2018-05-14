@@ -1,0 +1,11 @@
+cotxe|1252HTJ|AL03780|Alacant|26|05
+tractor|122WHTJ|AL03780|Alacant|26|06
+moto|121W1TJ|AL03780|Alacant|26|06
+tractor|1252HTJ|CS1003|Castelló|26|06
+tractor|1251W4J|CS1003|Castelló|26|02
+tractor|1255STJ|CS1003|Castelló|26|06
+tractor|1252HTJ|CS1003|Castelló|26|01
+tractor|1252HTJ|CS1003|Castelló|26|06
+moto|122CHTJ|CS1003|Castelló|26|01
+moto|1252HTJ|CS1003|Castelló|26|01
+cotxe|121SFTJ|CS1003|Castelló|26|04

@@ -1,0 +1,5 @@
+4
+7 8 5 L'ona
+2 1 4 Atxili
+1 2 5 Tallarina
+0 0 4 El vent

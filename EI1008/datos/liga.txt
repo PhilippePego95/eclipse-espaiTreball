@@ -1,0 +1,3 @@
+Athletic_Club 5 SD_Lagunak 0
+SC_Huelva 1 Athletic_Club 1
+SD_Lagunak 0 SC_Huelva 5
