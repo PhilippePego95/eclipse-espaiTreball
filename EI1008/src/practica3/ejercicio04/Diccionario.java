@@ -15,7 +15,7 @@ public class Diccionario {
 
 		public Nodo(String dato, int n) {
 			this.dato = dato;
-			this.cantidad = cantidad + n;
+			this.cantidad = n;
 		}
 
 	}
@@ -74,11 +74,12 @@ public class Diccionario {
 			boolean añadido = false;
 			Nodo node = new Nodo(unaCadena, unaCantidad);
 			for (int i = 0; i < talla; i++) {
-				if (aux.dato.compareTo(unaCadena) == 0) {
+				int res=aux.dato.compareTo(unaCadena);
+				if (res == 0) {
 					aux.cantidad += unaCantidad;
 					añadido = true;
 					break;
-				} else if (aux.dato.compareTo(unaCadena) > 0) {
+				} else if (res > 0) {
 					if (i > 0) {
 						aux.ant.sig = node;
 						node.ant = aux.ant;
