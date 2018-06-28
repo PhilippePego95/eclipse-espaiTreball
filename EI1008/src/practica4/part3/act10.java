@@ -1,4 +1,4 @@
-package practica4;
+package practica4.part3;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,9 +1,9 @@
-package practica4;
+package practica4.part1;
 
 public class act01 {
 	public static void main(String[] args) {
 	
-			variacionesRepetición(3, 3);
+			variacionesRepetición(4, 4);
 	}
 
 	public static void variacionesRepetición(int n, int m) {

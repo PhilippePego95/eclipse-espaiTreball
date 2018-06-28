@@ -1,20 +1,39 @@
-package practica4;
+package practica4.part3;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class act12 {
+public class act11 {
 	public static void main(String[] args) throws FileNotFoundException {
-		String[] dnisCenso = crearVectorDni("datos/dniCensoOrdenado.txt");
+		String[] dnisCenso = crearVectorDni("datos/dniCenso.txt");
 		String[] dnisClientes = crearVectorDni("datos/dniClientesOrdenado.txt");
+		
 		long tiempoInicio = System.currentTimeMillis();
 		int coincidencias = contarCoincidencias(dnisCenso, dnisClientes);
 		long tiempoTranscurrido = System.currentTimeMillis() - tiempoInicio;
 
 		System.out.println("He encontrado " + coincidencias + " coincidencias (empleando " + tiempoTranscurrido
 				+ " milisegundos)");
+	}
 
+	public static boolean buscarDni(String dni, String[] v) {
+		// for (String dato : v) {
+		int inicio = 0;
+		int fin = v.length - 1;
+
+		while (inicio <= fin) {
+			int medio = (inicio+fin) / 2;
+			int comp=dni.compareTo(v[medio]);
+			if (comp > 0) {
+				inicio = medio + 1;
+			} else if (comp < 0) {
+				fin = medio - 1;
+			}else {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public static String[] crearVectorDni(String fichero) throws FileNotFoundException {
@@ -32,36 +51,9 @@ public class act12 {
 
 	public static int contarCoincidencias(String[] v1, String[] v2) {
 		int can = 0;
-		int i = 0, j = 0;
-		while (i < v1.length && j < v2.length) {
-			
-			int comp=v1[i].compareTo(v2[j]);
-			if (comp > 0) {
-				j++;
-			} else if (comp < 0) {
-				i++;
-			} else if (comp==0) {
+		for (String dni : v1)
+			if (buscarDni(dni, v2))
 				can++;
-				i++;
-				j++;
-
-			}
-		}
-		
-		while (i < v1.length) {
-			if (v1[i].equals(v2[j])) {
-				can++;
-
-			}
-			i++;
-		}
-		while (j < v2.length) {
-			if (v1[i-1].equals(v2[j])) {
-				can++;
-
-			}
-			j++;
-		}
 		return can;
 	}
 }
